@@ -13,6 +13,7 @@ public class Solution {
         if(root == null){
             return 0;
         }
+        
        else {
            return 1 + countNodes(root.left) + countNodes(root.right);
            
