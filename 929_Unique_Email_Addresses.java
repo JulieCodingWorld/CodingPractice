@@ -4,15 +4,21 @@ class Solution {
         Set<String> set = new HashSet<>();
         
         StringBuilder builder = new StringBuilder();
+        
         char[] array = null;
+        
         boolean isLocalName = true;
+        
         boolean isRunning = true;
         
         for(String email:emails){
             
             isLocalName = true;
+            
             isRunning = true;
+            
             array = email.toCharArray();
+            
             for(char c:array){
                 
                 if(c == '+'){
@@ -30,9 +36,12 @@ class Solution {
                     }
                 }
             }
+            
             set.add(builder.toString());
+            
             builder.setLength(0);
         }
-        return set.size();        
+      
+        return set.size();
     }
 }
